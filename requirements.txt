@@ -2,4 +2,5 @@ streamlit
 alpaca-py
 plotly
 pandas
+matplotlib
 numpy
