@@ -101,7 +101,7 @@ if st.button('Run'):
     output = {}
     ledger = {}
     for i in range(1):
-        end_date = datetime.now() - timedelta(days=365*i)
+        end_date = datetime.now() - timedelta(days=365*i) - timedelta(minutes=15)
         start_date = end_date - timedelta(days=365)
         ledger[start_date.date()] = {}
 
