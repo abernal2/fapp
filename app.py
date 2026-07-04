@@ -64,7 +64,7 @@ ticker_list = [
 if "master_tickers" not in st.session_state:
     st.session_state.master_tickers = ticker_list
 if "results" not in st.session_state:
-    st.session_state.result = None
+    st.session_state.results = None
 
 # 2. Section to add a new ticker
 st.subheader("Add a Custom Ticker")
