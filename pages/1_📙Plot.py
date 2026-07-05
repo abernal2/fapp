@@ -283,5 +283,12 @@ if st.button('Run'):
     # 6. Render the interactive chart in Streamlit
     st.pyplot(fig, use_container_width=True)
 
+    vals = df_indx['30'].values
+    vals = vals[vals != 0]
+    formatted = [f"{num:.2f}%" for num in vals[-10:]]
+    st.write(f"Latest 30-day returns: {', '.join(formatted)}")
+    vals = df_indx['close'].values
+    formatted = [f"${num:.2f}" for num in vals[-10:]]
+    st.write(f"Latest closing prices: {', '.join(formatted)}")
 else:
     st.info("Click the 'Run' button above to generate the results dataframe.")
